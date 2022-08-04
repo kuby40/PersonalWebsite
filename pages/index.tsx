@@ -10,21 +10,83 @@ import Script from "next/script";
 import { useEffect } from "react";
 
 const Home: NextPage = () => {
+  const introScene = () => {
+    const intro = Array.from(
+      document.getElementsByClassName(
+        styles.intro
+      ) as HTMLCollectionOf<HTMLElement>
+    );
+    const logoSpan = Array.from(
+      document.getElementsByClassName(
+        styles.logo
+      ) as HTMLCollectionOf<HTMLElement>
+    );
+    console.log("DOM LOADED");
+    
+      setTimeout(() => {
+        logoSpan.forEach((span, index) => {
+          setTimeout(() => {
+            console.log('inside timeout')
+            span.classList.add(styles.logoActive);
+            if (index === 1) {
+              span.style.top = "10px";
+            }
+          }, (index + 1) * 1000);
+        });
+
+        setTimeout(() => {
+          logoSpan.forEach((span) => {
+            setTimeout(() => {
+              span.classList.remove(styles.logoActive);
+              if (intro[0] != null) {
+                intro[0].classList.add(styles.introActive);
+              }
+            }, 5000);
+          });
+        }, 1000);
+
+        setTimeout(() => {
+          if (intro[0] != null) {
+            intro[0].style.top = "200vh";
+          }
+        }, 7000);
+      });
+  };
   useEffect(() => {
     // 👇 add class to body element
     document.body.classList.add("text-center");
     document.body.classList.add("text-white");
     document.body.classList.add("fBackground");
+    introScene();
     return;
   }, []);
   return (
     <Container fluid>
+      {true && (
+        <div className={styles.intro} id="intro">
+          <h1 className={styles.logo_header}>
+            <span className={styles.logo}>Hey,</span>
+          </h1>
+
+          <h1 className={styles.logo_header}>
+            <span className={styles.logo}>I&apos;m Craig.</span>
+          </h1>
+
+          <h1 className={styles.logo_header}>
+            <span className={styles.logo}> &lt;- Programmer</span>
+          </h1>
+
+          <h1 className={styles.logo_header}>
+            <span className={styles.logo}>Musician -&gt; </span>
+          </h1>
+        </div>
+      )}
       <Head>
         <title>Craig Kubinec</title>
         <meta name="description" content="The landing page for Craig Kubinec" />
       </Head>
       <Script></Script>
-      <Row auto={true}>
+      <Row>
         <Link href="/programming">
           <Col md={6} className={styles.col_left}>
             <a>
