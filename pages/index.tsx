@@ -1,57 +1,73 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import type { NextPage } from "next";
+import Head from "next/head";
+import Link from "next/link";
+import { Col } from "react-bootstrap";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import styles from "../styles/Home.module.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Script from "next/script";
+import { useEffect } from "react";
 
 const Home: NextPage = () => {
+  useEffect(() => {
+    // 👇 add class to body element
+    document.body.classList.add("text-center");
+    document.body.classList.add("text-white");
+    document.body.classList.add("fBackground");
+    return;
+  }, []);
   return (
-    <div className={styles.container}>
+    <Container fluid>
       <Head>
         <title>Craig Kubinec</title>
         <meta name="description" content="The landing page for Craig Kubinec" />
       </Head>
+      <Script></Script>
+      <Row auto={true}>
+        <Link href="/programming">
+          <Col md={6} className={styles.col_left}>
+            <a>
+              <h1 className={styles.title}>Programming</h1>
+              <div
+                className={
+                  styles.anim_l +
+                  " position-absolute top-0 start-0 translate-middle"
+                }
+              >
+                <span className={styles.anim_btn}></span>
+                <span className={styles.anim_text + " fs-1"}>
+                  <i className="bi bi-code"></i>Programming
+                  <i className="bi bi-code-slash"></i>
+                </span>
+              </div>
+            </a>
+          </Col>
+        </Link>
+        <Link href="/music">
+          <Col md={6} className={styles.col_right}>
+            <a href="/music">
+              <div>
+                <h1 className={styles.title}>Music</h1>
+              </div>
+              <div
+                className={
+                  styles.anim_r +
+                  " position-absolute top-0 start-50 translate-middle"
+                }
+              >
+                <span className={styles.anim_btn}></span>
+                <span className={styles.anim_text + " fs-1"}>
+                  <i className="bi bi-music-note"></i>Music
+                  <i className="bi bi-music-note"></i>
+                </span>
+              </div>
+            </a>
+          </Col>
+        </Link>
+      </Row>
+    </Container>
+  );
+};
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.tsx</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-    </div>
-  )
-}
-
-export default Home
+export default Home;
