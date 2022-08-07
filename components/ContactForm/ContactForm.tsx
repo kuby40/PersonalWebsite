@@ -1,6 +1,7 @@
+
 const ContactForm: React.FC = () => {
   return (
-    <form action="/programming" method="POST">
+    <form method="POST">
       <div className="mb-3">
         <label htmlFor="email" className="form-label">
           Your Email Address
