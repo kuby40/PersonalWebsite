@@ -3,21 +3,18 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { useEffect } from "react";
 import styles from "./Music.module.css";
 import Header from "../UI/Header/Header";
+import Footer from "../UI/Footer/Footer";
+import { Container } from "react-bootstrap";
 const Music: React.FC = () => {
     useEffect(() => {
-        const bodyStyle = ['text-center', 'text-white', styles.body];
+        const bodyStyle: string[] = ['text-center', 'text-white', styles.body];
         bodyStyle.forEach(element => {
             document.body.classList.add(element);           
         });
       
   }, []);
   return (
-    <div
-      className={
-        styles["cover-container"] +
-        " d-flex w-100 h-100 p-3 mx-auto flex-column"
-      }
-    >
+      <Container fluid className='d-flex w-100 h-100 flex-column p-0 m-0'>
       <Header/>
       <main className={styles.main + " px-3 my-auto mx-auto"}>
         <h1>Music</h1>
@@ -29,8 +26,8 @@ const Music: React.FC = () => {
           Stay tuned!
         </p>  
       </main>
-      </div>
-      
+      <Footer/>
+      </Container>
   );
 };
 

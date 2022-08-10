@@ -3,10 +3,9 @@ import styles from './Header.module.css'
 import { useRouter } from "next/router";
 const Header: React.FC = () => {
   const router = useRouter();
-  console.log(router.pathname);
     return (
       <header>
-        <h3 className="justify-content-center float-md-center">
+        <h3 className="justify-content-center float-md-center pt-3">
           Craig Kubinec
         </h3>
         <nav className="nav nav-masthead justify-content-center float-md-center">
