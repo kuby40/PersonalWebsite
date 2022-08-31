@@ -43,7 +43,7 @@ const HomePage: React.FC = () => {
         </Link>
         <Link href="/music">
           <Col md={6} className={styles.col_right}>
-            <a href="/music">
+            <a>
               <div>
                 <h1 className={styles.title}>Music</h1>
               </div>
