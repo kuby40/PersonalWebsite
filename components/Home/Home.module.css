@@ -11,7 +11,7 @@
 .col_left {
     height: 100vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
-        url(./../../public/pics/coding.jpg);
+        url(/pics/coding.jpg);
     background-size: cover;
     background-position: center;
     cursor: pointer;
@@ -20,18 +20,18 @@
 .col_right {
     height: 100vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
-        url(./../../public/pics/studioone.jpg);
+        url(/pics/studioone.jpg);
     background-size: cover;
     background-position: center;
     cursor: pointer;
 }
 
 .col_left:hover {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(./../../public/pics/coding.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(/pics/coding.jpg);
 }
 
 .col_right:hover {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(./../../public/pics/studioone.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(/pics/studioone.jpg);
 }
 
 .title {
@@ -40,11 +40,11 @@
 
 @media only screen and (max-width: 770px) {
     .col_left {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(./../../public/pics/coding.jpg);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(/pics/coding.jpg);
     }
 
     .col_right {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(./../../public/pics/studioone.jpg);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(/pics/studioone.jpg);
     }
 
     .title {
