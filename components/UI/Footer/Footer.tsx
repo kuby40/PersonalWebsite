@@ -15,6 +15,7 @@ const Footer: React.FC = () => {
             </Col>
             <Col className="pt-3">
               <div>
+                <p className='my-0'>Socials</p>
                 <span>
                   <a
                     href="https://www.facebook.com/craig.kubinec/"
