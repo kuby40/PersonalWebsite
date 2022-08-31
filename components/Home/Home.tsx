@@ -1,8 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
-import { Col } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
 import styles from "./Home.module.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useEffect } from "react";
@@ -19,7 +18,8 @@ const HomePage: React.FC = () => {
       <Intro />
       <Head>
         <title>Craig Kubinec</title>
-        <meta name="description" content="The landing page for Craig Kubinec" />
+        <meta name="description" content="The landing page for Craig Kubinec's Development and Music showcase Website. Programming, Music links available on the page"/>
+        <link rel="icon" href="/pics/CKLogo.jpg"></link>
       </Head>
       <Row>
         <Link href="/programming">

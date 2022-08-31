@@ -21,7 +21,7 @@ const Music: React.FC = () => {
         <p className="lead">
           I&apos;m working on a project currently.
           <br />
-          I hope to have this out in 2022.
+          I hope to have this out in 2023.
           <br />
           Stay tuned!
         </p>  

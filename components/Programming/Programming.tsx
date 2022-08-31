@@ -22,8 +22,7 @@ const Programming: React.FC = () => {
         className="d-flex w-100 h-100 flex-column p-0 m-0 justify-content-between"
       >
         <Header />
-        <h1>My Stack</h1>
-              <ProgrammingList></ProgrammingList>
+        <ProgrammingList></ProgrammingList>
         <Footer />
       </Container>
     </React.Fragment>
