@@ -14,8 +14,22 @@ const Music: React.FC = () => {
       
   }, []);
   return (
-      <Container fluid className='d-flex w-100 h-100 flex-column p-0 m-0'>
-      <Header/>
+    <Container fluid className="d-flex w-100 h-100 flex-column p-0 m-0">
+      <Head>
+        <title>Craig Kubinec Music</title>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0"
+        ></meta>
+        <meta name="keywords" content="Craig, Kubinec, Music"></meta>
+        <meta name="author" content="Craig Kubinec"></meta>
+        <meta
+          name="description"
+          content="Craig Kubinec's Music showcase page"
+        />
+        <link rel="icon" href="/pics/CKLogo.jpg"></link>
+      </Head>
+      <Header />
       <main className={styles.main + " px-3 my-auto mx-auto"}>
         <h1>Music</h1>
         <p className="lead">
@@ -24,10 +38,10 @@ const Music: React.FC = () => {
           I hope to have this out in 2023.
           <br />
           Stay tuned!
-        </p>  
+        </p>
       </main>
-      <Footer/>
-      </Container>
+      <Footer />
+    </Container>
   );
 };
 

@@ -6,6 +6,7 @@ import ProgrammingList from "./ProgrammingList";
 import styles from "./Programming.module.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container } from "react-bootstrap";
+import Head from "next/head";
 
 const Programming: React.FC = () => {
   useEffect(() => {
@@ -16,6 +17,17 @@ const Programming: React.FC = () => {
   });
   return (
     <React.Fragment>
+      <Head>
+        <title>Craig Kubinec Development</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+        <meta name="keywords" content="Craig, Kubinec, Programming"></meta>
+        <meta name="author" content="Craig Kubinec"></meta>
+        <meta
+          name="description"
+          content="Craig Kubinec's Programming showcase page"
+        />
+        <link rel="icon" href="/pics/CKLogo.jpg"></link>
+      </Head>
       <ParticlesContainer />
       <Container
         fluid

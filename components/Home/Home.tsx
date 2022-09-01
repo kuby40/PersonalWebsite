@@ -18,7 +18,16 @@ const HomePage: React.FC = () => {
       <Intro />
       <Head>
         <title>Craig Kubinec</title>
-        <meta name="description" content="The landing page for Craig Kubinec's Development and Music showcase Website. Programming, Music links available on the page"/>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0"
+        ></meta>
+        <meta name="keywords" content="Craig, Kubinec"></meta>
+        <meta name="author" content="Craig Kubinec"></meta>
+        <meta
+          name="description"
+          content="The landing page for Craig Kubinec's Development and Music showcase Website. Programming, Music links available on the page"
+        />
         <link rel="icon" href="/pics/CKLogo.jpg"></link>
       </Head>
       <Row>
