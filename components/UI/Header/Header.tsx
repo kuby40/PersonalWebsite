@@ -4,11 +4,11 @@ import { useRouter } from "next/router";
 const Header: React.FC = () => {
   const router = useRouter();
     return (
-      <header>
+      <header className={styles.header}>
         <h3 className="justify-content-center float-md-center pt-3">
           Craig Kubinec
         </h3>
-        <nav className="nav nav-masthead justify-content-center float-md-center">
+        <nav className="nav nav-masthead justify-content-center float-md-center mb-3">
           <Link href="/programming">
             {router.pathname === '/programming' ?
             <a className={styles["nav-link"] + ' ' + styles.active} aria-current="page">Programming</a> :
