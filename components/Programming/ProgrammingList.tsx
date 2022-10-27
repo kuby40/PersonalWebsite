@@ -3,7 +3,23 @@ import Image from "next/image";
 import { Container, Row, Col } from "react-bootstrap";
 import Carousel from "react-bootstrap/Carousel";
 import styles from "./ProgrammingList.module.css";
+import { useState } from "react";
 const ProgrammingList = () => {
+  const obj: Array<string> = ['Java', 'Python','HTML','CSS', 'Bootstrap','Javascript', 'Typescript', 'NodeJS', 'ExpressJS', 'ReactJS', 'NextJS', 'MySQL', 'MongoDB', 'Oracle PL/SQL' ];
+  const [index, setIndex] = useState(0);
+  const [title, setTitle] = useState('Java');
+
+  interface IndexData {
+    index: number;
+  }
+  const handleSelect = (selectedIndex: number) => {
+    setTitle(obj[selectedIndex])
+    if (!(index > 12)) {
+      setIndex(index + 1);
+    } else {
+      setIndex(0);
+    }
+  };
   return (
     <Container fluid className={styles.list + " w-50"}>
       <Row className="mb-5">
@@ -11,6 +27,8 @@ const ProgrammingList = () => {
       </Row>
       <Row className="mb-5">
         <Carousel
+          activeIndex={index}
+          onSelect={handleSelect}
           interval={1000}
           controls={false}
           indicators={false}
@@ -139,6 +157,9 @@ const ProgrammingList = () => {
             />
           </Carousel.Item>
         </Carousel>
+      </Row>
+      <Row>
+        <h3 className="text-black">{title}</h3>
       </Row>
     </Container>
   );
